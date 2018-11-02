@@ -1,8 +1,14 @@
 # Mandatory packages for client.
 jubatus==1.1.0
 
+# Wrapper for jubatus client.
+jubakit==0.6.1
+
 # For command line options.
 Click==7.0
 
 # For environment variable management.
 python-dotenv==0.9.1
+
+# Miscellaneous
+pathlib==1.0.1
