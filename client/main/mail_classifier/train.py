@@ -1,32 +1,8 @@
-from pathlib import Path
-from jubakit.classifier import Classifier, Schema, Dataset
-from jubakit.loader.csv import CSVLoader
-
-# Get a script path.
-current_dir = Path(__file__).parent
-csv_file_path = current_dir / 'data/mails.csv'
+from jubakit.classifier import Classifier
+from client.main.mail_classifier.helpers.load import load_mails
 
 # Load a CSV file.
-loader = CSVLoader(csv_file_path)
-
-# Define a Schema that defines types for each columns of the CSV file.
-# In this case, we are trying to classify a category of email from its subject.
-# It looks like we have to include all attribute of CSV to schema even if we only use specific attribute.
-schema = Schema(
-    {
-        'category': Schema.LABEL,
-        'subject': Schema.STRING,
-        'id': Schema.NUMBER,
-        'from_address': Schema.STRING,
-        'text': Schema.STRING,
-        'html': Schema.STRING,
-        'received_at': Schema.STRING,
-        'attachments': Schema.STRING
-    }
-)
-
-# Shuffle training data for better learning.
-dataset = Dataset(loader, schema).shuffle()
+dataset = load_mails()
 
 # Connect to an existing Jubatus service.
 classifier = Classifier('127.0.0.1', 9199)  # TODO: Remove hard coding
