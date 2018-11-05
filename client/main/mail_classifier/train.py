@@ -1,11 +1,13 @@
 from jubakit.classifier import Classifier
+
+from client.settings import MAIL_CLASSIFIER_HOST, MAIL_CLASSIFIER_PORT
 from client.main.mail_classifier.helpers.load import load_mails
 
 # Load a CSV file.
 dataset = load_mails()
 
 # Connect to an existing Jubatus service.
-classifier = Classifier('127.0.0.1', 9199)  # TODO: Remove hard coding
+classifier = Classifier(MAIL_CLASSIFIER_HOST, MAIL_CLASSIFIER_PORT)
 
 # Train the classifier with every data in the dataset.
 # TODO: Implement cross validation.
