@@ -1,6 +1,9 @@
 # Mandatory packages for client.
 jubatus==1.1.0
 
+# For analysis
+scikit-learn==0.20.0
+
 # Wrapper for jubatus client.
 jubakit==0.6.1
 
