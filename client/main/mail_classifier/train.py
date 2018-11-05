@@ -6,6 +6,9 @@ from client.main.mail_classifier.data.loader import load_mails
 # Load a CSV file.
 dataset = load_mails()
 
+# Shuffle the dataset, as the dataset is sorted by label.
+dataset = dataset.shuffle()
+
 # Connect to an existing Jubatus service.
 classifier = Classifier(MAIL_CLASSIFIER_HOST, MAIL_CLASSIFIER_PORT)
 
@@ -21,7 +24,7 @@ for (idx, label, result) in classifier.classify(dataset, use_softmax):
     for (est_label, est_score) in result:
         print("    Estimated Label: {0} ({1})".format(est_label, est_score))
 
-# Clear and Stop the classifier.
+# Clear and Stop the classifier. TODO: Remove this if you want to persist a trained model.
 classifier.clear()
 classifier.stop()
 
