@@ -10,8 +10,8 @@ def load_mails():
     :rtype jubakit.classifier.Dataset
     """
     # Get a CSV path.
-    root = Path(__file__).parent.parent
-    csv_file_path = root / 'data/mails.csv'
+    current_dir = Path(__file__).parent
+    csv_file_path = current_dir / 'mails.csv'
 
     # Load a CSV file.
     loader = CSVLoader(csv_file_path)

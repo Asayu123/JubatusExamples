@@ -1,7 +1,7 @@
 from jubakit.classifier import Classifier
 
 from client.settings import MAIL_CLASSIFIER_HOST, MAIL_CLASSIFIER_PORT
-from client.main.mail_classifier.helpers.load import load_mails
+from client.main.mail_classifier.data.loader import load_mails
 
 # Load a CSV file.
 dataset = load_mails()
