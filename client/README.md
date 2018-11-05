@@ -1,6 +1,9 @@
 # Jubatus Client Examples
 Examples of standalone programs that connects to jubatus server.
 
+# Requirements
+ * Python 3.6 or higher.
+
 # How to Run
 1. Add a path of this directory to $PYTHONPATH from **project root** before you run.
 
