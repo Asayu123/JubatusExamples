@@ -23,12 +23,12 @@ def load_mails():
         {
             'category': Schema.LABEL,
             'subject': Schema.STRING,
-            'id': Schema.NUMBER,
-            'from_address': Schema.STRING,
+            'id': Schema.IGNORE,
+            'from_address': Schema.IGNORE,
             'text': Schema.STRING,
-            'html': Schema.STRING,
-            'received_at': Schema.STRING,
-            'attachments': Schema.STRING
+            'html': Schema.IGNORE,
+            'received_at': Schema.IGNORE,
+            'attachments': Schema.IGNORE
         }
     )
 
