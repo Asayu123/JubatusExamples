@@ -17,6 +17,7 @@ class TestMailClassifier(TestCase):
     def setUp(self):
         self.estimator = self._estimator_class(MAIL_CLASSIFIER_HOST, MAIL_CLASSIFIER_PORT)
         self.dataset = load_mails()  # A stream will be closed if all data has been yielded, so load it every test.
+        self.dataset.shuffle()
 
     def tearDown(self):
         # In this case, we are going to clear the learned model on the remote server every test.

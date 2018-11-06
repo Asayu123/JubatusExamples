@@ -33,6 +33,6 @@ def load_mails():
     )
 
     # Shuffle training data for better learning.
-    dataset = Dataset(loader, schema).shuffle()
+    dataset = Dataset(loader, schema)
 
     return dataset
