@@ -26,11 +26,11 @@ def load_mails():
             'id': Schema.ID,
             'from_address': Schema.IGNORE,
             'text': Schema.STRING,
-            'html': Schema.IGNORE,
             'received_at': Schema.IGNORE,
-            'attachments': Schema.IGNORE
+            'attachments': Schema.STRING
         }
     )
+    # TODO: Append a validation logic for attachments attribute. (It must be space separated strings.)
 
     # Shuffle training data for better learning.
     dataset = Dataset(loader, schema)
