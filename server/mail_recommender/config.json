@@ -12,7 +12,7 @@
       "bigram": { "method": "ngram", "char_num": "2" }
     },
     "string_rules": [
-      { "key": "*", "type": "bigram", "sample_weight": "bin", "global_weight": "bin" }
+      { "key": "*", "type": "bigram", "sample_weight": "tf", "global_weight": "idf1" }
     ],
     "num_types": {},
     "num_rules": [
