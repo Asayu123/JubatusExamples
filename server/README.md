@@ -7,7 +7,7 @@ Examples of server configuration files that correspond to jubatus client program
   
     ```
     docker build -t jubaclassifier:0.0.1 .
-    docker run -p 9199:9199 --name 'jubaclassifier' --init jubaclassifier:0.0.1
+    docker run -d -p 9199:9199 --name 'jubaclassifier' --init jubaclassifier:0.0.1
     ```
   
   * Alternatively, send configuration files to existing jubatus server.
