@@ -4,17 +4,16 @@ from jubakit.loader.csv import CSVLoader
 from jubakit.recommender import Schema, Dataset
 
 
-def load_mails():
+def load_mails(path):
     """Create data set from CSV file.
+    :param path: An absolute path of csv file.
+    :type path: str
     :return: dataset
     :rtype jubakit.classifier.Dataset
     """
-    # Get a CSV path.
-    current_dir = Path(__file__).parent
-    csv_file_path = current_dir / 'mails.csv'
 
     # Load a CSV file.
-    loader = CSVLoader(csv_file_path)
+    loader = CSVLoader(path)
 
     # Define a Schema that defines types for each columns of the CSV file.
     # In this case, we are trying to classify a category of email from its subject.
