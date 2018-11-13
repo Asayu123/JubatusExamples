@@ -1,4 +1,4 @@
 id,from_address,subject,text,received_at,attachments,category
-1,myfriend@example.com,Hi there,Hi,2018-10-25 15:00:14,,others
+1,myfriend@example.com,Hi there,Hi,2018-10-25 15:00:14,,person
 2,myboss@example.com,Regarding meeting on Monday,"As you know, ...",2018-10-25 14:59:37,document.docs sheet.xls,job
 3,myparent@example.com,Be careful not to catch cold.,It looks like ...,2018-10-25 14:57:32,,others
