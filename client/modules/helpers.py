@@ -9,7 +9,7 @@ def k_fold_validation(service, n_splits, dataset):
     :type n_splits: int
     :param dataset: An instance of Jubatus Dataset.
     :return: true_labels, predicted_labels
-    :rtype:
+    :rtype: list of str, list of str
     """
 
     true_labels = []
