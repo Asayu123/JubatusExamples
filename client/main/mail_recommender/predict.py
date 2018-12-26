@@ -18,7 +18,4 @@ for (idx, row_id, result) in service.similar_row_from_datum(dataset, size=3):
     print('DocumentID {0} is similar to : {1} (score:{2:.3f}), {3} (score:{4:.3f})'.format(
           result[0].id, result[1].id, result[1].score, result[2].id, result[2].score))
 
-# Clear and Stop the recommender. TODO: Remove this if you want to persist a trained model.
 service.stop()
-service.clear()
-
