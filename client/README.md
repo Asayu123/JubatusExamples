@@ -1,28 +1,14 @@
 # Jubatus Client Examples
 Examples of standalone programs that connects to jubatus server.
 
-# Directory structures
-* Create a directory under ./main per one theme like following.
-
-```bash
- .
-├── README.md
-├── main
-│       ├── mail_classifier
-│       │       ├── predict.py
-│       │       └── train.py
-│       └── mail_recommender
-│                  ├── predict.py
-│                  └── train.py
-└── modules
-           └── wrapper.py
-```
+# Requirements
+ * Python 3.6 or higher.
 
 # How to Run
 1. Add a path of this directory to $PYTHONPATH from **project root** before you run.
 
     ```bash
-    export PYTHONPATH="./client:$PYTHONPATH"`
+    export PYTHONPATH="./client:$PYTHONPATH"
     ```
 
 2. Type following command from **project root**.

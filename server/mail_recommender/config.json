@@ -1,0 +1,33 @@
+{
+  "method": "lsh",
+    "parameter" : {
+      "hash_num" : 64,
+      "unlearner" : "lru",
+      "unlearner_parameter" : {
+        "max_size": 32768
+      }
+    },
+  "converter": {
+    "num_filter_types": {},
+    "num_filter_rules": [],
+    "string_filter_types": {},
+    "string_filter_rules": [],
+    "string_types": {
+      "mecab": {
+        "method": "dynamic",
+        "function": "create",
+        "path": "libmecab_splitter.so",
+        "arg": "-d /opt/jubatus/lib/mecab/dic/ipadic",
+        "base": "true",
+        "include_features": "*"
+      }
+    },
+    "string_rules": [
+      { "key": "*", "type": "mecab", "sample_weight": "tf", "global_weight": "idf" }
+    ],
+    "num_types": {},
+    "num_rules": [
+      {"key" : "*", "type" : "num"}
+    ]
+  }
+}
